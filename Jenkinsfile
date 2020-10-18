@@ -8,8 +8,14 @@ pipeline {
 				"""
 			} //steps
 		} //stage
+		stage("Run unit test") {
+			steps {
+				sh """
+				    pytest
+				"""	
+			} //steps
+		}//stage
 	} //stages
-
 } //pipeline
 
 
